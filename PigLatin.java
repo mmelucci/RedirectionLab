@@ -1,3 +1,4 @@
+import java.lang.Character;
 public class PigLatin {
   public static String pigLatinSimple(String s){
     s = s.toLowerCase();
@@ -62,6 +63,26 @@ public class PigLatin {
     return s;
   }
 
+  public static String pigLatinBest(String s){
+    // Given a single word of at least 1 character, that can optionally have a punctuation mark afterwards.
+    // Words that start with a NON letter are left alone
+    // Otherwise: Same rules as pigLatin() except now there can optionally be punctuation marks at the end of a word.
+    // Punctuation is any non-letter, non-number symbol after the word.
+    // The punctuation must remain after the word after you convert to pig latin.
+    // output should be lower case to avoid issues with capitalization
+    if (!Character.isLetter(s.charAt(0))) {
+      return s;
+    }
+    else {
+      if (!Character.isLetter(s.charAt(s.length()-1))) {
+        return (pigLatin(s.substring(0, s.length()-1)) + s.charAt(s.length()-1));
+      }
+      else {
+        return pigLatin(s);
+      }
+    }
+  }
+
   public static void main (String[] args) {
       System.out.println("PigLatin I Tests:");
       System.out.println("Expected: ockmay");
@@ -105,6 +126,40 @@ public class PigLatin {
       System.out.println("Expected: adegray");
       System.out.print("Result: ");
       System.out.println(pigLatin("grade"));
+      System.out.println();
+
+      System.out.println("PigLatin III Tests:");
+      System.out.println("Expected: *emu");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("*emu"));
+      System.out.println();
+      System.out.println("Expected: 4chan");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("4chan"));
+      System.out.println();
+      System.out.println("Expected: ishfay!");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("fish!"));
+      System.out.println();
+      System.out.println("Expected: ishfay");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("fish"));
+      System.out.println();
+      System.out.println("Expected: ethay.");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("the."));
+      System.out.println();
+      System.out.println("Expected: atcay!");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("cat!"));
+      System.out.println();
+      System.out.println("Expected: amazinghay?");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("amazing?"));
+      System.out.println();
+      System.out.println("Expected: applehay%");
+      System.out.print("Result: ");
+      System.out.println(pigLatinBest("apple%"));
       System.out.println();
     }
   }
