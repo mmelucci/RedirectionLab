@@ -1,3 +1,4 @@
+import java.util.*;
 import java.lang.Character;
 public class PigLatin {
   public static String pigLatinSimple(String s){
@@ -83,83 +84,96 @@ public class PigLatin {
     }
   }
 
-  public static void main (String[] args) {
-      System.out.println("PigLatin I Tests:");
-      System.out.println("Expected: ockmay");
-      System.out.print("Result: ");
-      System.out.println(pigLatinSimple("mock"));
-      System.out.println();
-      System.out.println("Expected: iepay");
-      System.out.print("Result: ");
-      System.out.println(pigLatinSimple("pie"));
-      System.out.println();
-      System.out.println("Expected: avidday");
-      System.out.print("Result: ");
-      System.out.println(pigLatinSimple("david"));
-      System.out.println();
-      System.out.println("Expected: aaronhay");
-      System.out.print("Result: ");
-      System.out.println(pigLatinSimple("aaron"));
-      System.out.println();
-      System.out.println("Expected: uperracecarsay");
-      System.out.print("Result: ");
-      System.out.println(pigLatinSimple("Superracecar"));
-      System.out.println();
+  // public static void main (String[] args) {
+      // System.out.println("PigLatin I Tests:");
+      // System.out.println("Expected: ockmay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinSimple("mock"));
+      // System.out.println();
+      // System.out.println("Expected: iepay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinSimple("pie"));
+      // System.out.println();
+      // System.out.println("Expected: avidday");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinSimple("david"));
+      // System.out.println();
+      // System.out.println("Expected: aaronhay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinSimple("aaron"));
+      // System.out.println();
+      // System.out.println("Expected: uperracecarsay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinSimple("Superracecar"));
+      // System.out.println();
+      //
+      // System.out.println("PigLatin II Tests:");
+      // System.out.println("Expected: ethay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatin("the"));
+      // System.out.println();
+      // System.out.println("Expected: eckchay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatin("check"));
+      // System.out.println();
+      // System.out.println("Expected: eeskay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatin("skee"));
+      // System.out.println();
+      // System.out.println("Expected: emuhay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatin("emu"));
+      // System.out.println();
+      // System.out.println("Expected: adegray");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatin("grade"));
+      // System.out.println();
+      //
+      // System.out.println("PigLatin III Tests:");
+      // System.out.println("Expected: *emu");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("*emu"));
+      // System.out.println();
+      // System.out.println("Expected: 4chan");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("4chan"));
+      // System.out.println();
+      // System.out.println("Expected: ishfay!");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("fish!"));
+      // System.out.println();
+      // System.out.println("Expected: ishfay");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("fish"));
+      // System.out.println();
+      // System.out.println("Expected: ethay.");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("the."));
+      // System.out.println();
+      // System.out.println("Expected: atcay!");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("cat!"));
+      // System.out.println();
+      // System.out.println("Expected: amazinghay?");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("amazing?"));
+      // System.out.println();
+      // System.out.println("Expected: applehay%");
+      // System.out.print("Result: ");
+      // System.out.println(pigLatinBest("apple%"));
+      // System.out.println();
 
-      System.out.println("PigLatin II Tests:");
-      System.out.println("Expected: ethay");
-      System.out.print("Result: ");
-      System.out.println(pigLatin("the"));
-      System.out.println();
-      System.out.println("Expected: eckchay");
-      System.out.print("Result: ");
-      System.out.println(pigLatin("check"));
-      System.out.println();
-      System.out.println("Expected: eeskay");
-      System.out.print("Result: ");
-      System.out.println(pigLatin("skee"));
-      System.out.println();
-      System.out.println("Expected: emuhay");
-      System.out.print("Result: ");
-      System.out.println(pigLatin("emu"));
-      System.out.println();
-      System.out.println("Expected: adegray");
-      System.out.print("Result: ");
-      System.out.println(pigLatin("grade"));
-      System.out.println();
-
-      System.out.println("PigLatin III Tests:");
-      System.out.println("Expected: *emu");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("*emu"));
-      System.out.println();
-      System.out.println("Expected: 4chan");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("4chan"));
-      System.out.println();
-      System.out.println("Expected: ishfay!");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("fish!"));
-      System.out.println();
-      System.out.println("Expected: ishfay");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("fish"));
-      System.out.println();
-      System.out.println("Expected: ethay.");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("the."));
-      System.out.println();
-      System.out.println("Expected: atcay!");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("cat!"));
-      System.out.println();
-      System.out.println("Expected: amazinghay?");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("amazing?"));
-      System.out.println();
-      System.out.println("Expected: applehay%");
-      System.out.print("Result: ");
-      System.out.println(pigLatinBest("apple%"));
-      System.out.println();
+  public static void main( String[] args ){
+      Scanner n = new Scanner( System.in );
+      while (n.hasNextLine()) {
+        Scanner line = new Scanner (n.nextLine());
+        while (line.hasNext()) {
+          System.out.print(pigLatinBest(line.next()));
+          if (line.hasNext()) {
+            System.out.print(" ");
+          }
+        }
+        System.out.println();
+      }
     }
-  }
+}
